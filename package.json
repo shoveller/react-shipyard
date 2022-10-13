@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "npm exec --ws -- npx rimraf node_modules && npm exec --ws -- npx rimraf package-lock.json && npm exec --ws -- npx rimraf .next",
+    "clean": "run-p clean:node_modules clean:package_lock clean:next",
+    "clean:node_modules": "npm exec --ws -- npx rimraf node_modules",
+    "clean:package_lock": "npm exec --ws -- npx rimraf package-lock.json",
+    "clean:next": "npm exec --ws -- npx rimraf .next",
     "add": "npm i --loglevel verbose",
     "clean:i": "run-s clean add",
     "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate",
