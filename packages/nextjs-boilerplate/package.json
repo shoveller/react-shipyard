@@ -1,0 +1,22 @@
+{
+  "name": "nextjs-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "run-s clean:next dev:next",
+    "dev:next": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "clean": "run-p clean:node_modules clean:package_lock clean:next clean:storybook",
+    "clean:node_modules": "npx rimraf node_modules",
+    "clean:package_lock": "npx rimraf package-lock.json",
+    "clean:next:cache": "npx rimraf .next",
+    "clean:next:dist": "npx rimraf .out",
+    "clean:next": "run-s clean:next:cache clean:next:dist",
+    "storybook": "run-s clean:storybook dev:storybook",
+    "dev:storybook": "start-storybook -p 6006 -s ./public",
+    "build:storybook": "build-storybook -s public",
+    "clean:storybook": "npx rimraf ./storybook-static"
+  }
+}

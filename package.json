@@ -1,12 +1,56 @@
 {
   "name": "react-shipyard",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "npm exec --ws -- npm run clean",
+    "add": "npm i --loglevel verbose",
+    "clean:i": "run-s clean add",
+    "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate",
+    "dev:storybook:boilerplate": "npm run storybook -w packages/nextjs-boilerplate",
+    "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "cinos81@gmail.com",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "clean": "^4.0.2",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@mdx-js/react": "^2.1.5",
+    "@shoveller/copy-package": "^0.0.2",
+    "@shoveller/eslint-config-react": "^0.0.22",
+    "@shoveller/prettier-config": "^0.0.23",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "18.8.5",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.25.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "storybook-addon-next": "^1.6.9",
+    "typescript": "4.8.4"
+  }
 }
