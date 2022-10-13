@@ -4,8 +4,9 @@
 
 ## 사용법
 
-### next-boilerplate로 새 프로젝트 생성
+### next-boilerplate로 새 프로젝트를 생성하려면
 아래의 커맨드는 `atomic-kit` 이라는 프로젝트를 생성한다.
+프로젝트 루트에서 실행할 것.
 ```shell
 npx copyPackage -s 'packages/nextjs-boilerplate' -d 'packages/atomic-kit' -n atomic-kit -e 'node_modules' -e '.next' -e 'package-lock.json' -e 'tsconfig.tsbuildinfo'
 ```
