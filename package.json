@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "npm exec --ws -- npx rimraf node_modules && npm exec --ws -- npx rimraf package-lock.json && npm exec --ws -- npx rimraf .next",
-    "clean:i": "npm i clean && npm i -ws --loglevel verbose",
-    "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate"
+    "add": "npm i --loglevel verbose",
+    "clean:i": "run-s clean add",
+    "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "cinos81@gmail.com",
@@ -21,13 +23,17 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@shoveller/eslint-config": "^0.0.16",
-    "@shoveller/prettier-config": "^0.0.17",
+    "@shoveller/eslint-config-react": "^0.0.20",
+    "@shoveller/prettier-config": "^0.0.21",
     "@types/node": "18.8.5",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "eslint": "^8.25.0",
     "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "typescript": "4.8.4"
