@@ -3,8 +3,9 @@
 
 
 ## next-boilerplate로 새 프로젝트 생성하기
+아래의 커맨드는 `hello-nextjs` 라는 프로젝트를 생성한다.
 ```shell
-npx copyPackage -s 'packages/nextjs-boilerplate' -d 'packages/hello-nextjs' -n nextjs-test -e 'node_modules' -e '.next' -e 'package-lock.json' -e 'tsconfig.tsbuildinfo'
+npx copyPackage -s 'packages/nextjs-boilerplate' -d 'packages/hello-nextjs' -n hello-nextjs -e 'node_modules' -e '.next' -e 'package-lock.json' -e 'tsconfig.tsbuildinfo'
 ```
 
 ## 프로젝트 루트의 커맨드
