@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "run-s clean:next dev:next",
+    "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --fix",
+    "clean:next:cache": "npx rimraf ./next",
+    "clean:next:dist": "npx rimraf ./out",
+    "clean:next": "run-s clean:next:cache clean:next:dist"
   }
 }
