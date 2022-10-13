@@ -15,7 +15,5 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "./packages/nextjs-boilerplate/next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
