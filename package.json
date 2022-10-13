@@ -7,8 +7,10 @@
     "clean": "npm exec --ws -- npm run clean",
     "add": "npm i --loglevel verbose",
     "clean:i": "run-s clean add",
-    "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate",
-    "dev:storybook:boilerplate": "npm run storybook -w packages/nextjs-boilerplate",
+    "dev:nextjs:nextjs-boilerplate": "npm run dev -w packages/nextjs-boilerplate",
+    "dev:storybook:nextjs-boilerplate": "npm run storybook -w packages/nextjs-boilerplate",
+    "dev:nextjs:atomic-kit": "npm run dev -w packages/atomic-kit",
+    "dev:storybook:atomic-kit": "npm run storybook -w packages/atomic-kit",
     "prepare": "husky install",
     "test:jest": "npx jest -u --watchAll --collectCoverage"
   },
@@ -21,9 +23,11 @@
   "license": "ISC",
   "dependencies": {
     "clean": "^4.0.2",
+    "jotai": "^1.8.5",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-error-boundary": "^3.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -32,9 +36,11 @@
     "@shoveller/eslint-config-react": "^0.0.22",
     "@shoveller/prettier-config": "^0.0.23",
     "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
+    "@storybook/addon-viewport": "^6.5.12",
     "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/react": "^6.5.12",
