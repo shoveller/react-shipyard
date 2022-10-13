@@ -8,6 +8,7 @@
     "add": "npm i --loglevel verbose",
     "clean:i": "run-s clean add",
     "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate",
+    "dev:storybook:boilerplate": "npm run storybook -w packages/nextjs-boilerplate",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -25,8 +26,9 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@mdx-js/react": "^2.1.5",
-    "@shoveller/eslint-config-react": "^0.0.20",
-    "@shoveller/prettier-config": "^0.0.21",
+    "@shoveller/copy-package": "^0.0.2",
+    "@shoveller/eslint-config-react": "^0.0.22",
+    "@shoveller/prettier-config": "^0.0.23",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
