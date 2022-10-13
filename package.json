@@ -9,7 +9,8 @@
     "clean:i": "run-s clean add",
     "dev:nextjs:boilerplate": "npm run dev -w packages/nextjs-boilerplate",
     "dev:storybook:boilerplate": "npm run storybook -w packages/nextjs-boilerplate",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:jest": "npx jest -u --watchAll --collectCoverage"
   },
   "keywords": [],
   "author": "cinos81@gmail.com",
@@ -38,6 +39,8 @@
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "18.8.5",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
@@ -48,6 +51,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.18",
