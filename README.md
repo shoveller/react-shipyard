@@ -10,6 +10,10 @@
 npx copyPackage -s 'packages/nextjs-boilerplate' -d 'packages/atomic-kit' -n atomic-kit -e 'node_modules' -e '.next' -e 'package-lock.json' -e 'tsconfig.tsbuildinfo'
 ```
 
+### 프로젝트별 주요 커맨드
+- `npm run dev` : next.js 를 개발 모드로 기동
+- `npm run storybook` : storybook 을 개발 모드로 기동
+
 ### 프로젝트 루트의 주요 커맨드
 - `npm run clean:i` : 서브 패키지의 node_modules를 지우고 프로젝트에 의존성을 다시 설치
 - `npm run dev:nextjs:boilerplate` : next.js 용 보일러플레이트를 개발 모드로 기동
